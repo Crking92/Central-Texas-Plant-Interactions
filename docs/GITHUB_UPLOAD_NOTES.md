@@ -1,15 +1,10 @@
 # GitHub upload notes
 
-Upload the contents of this folder to the repository root.
-
-Required:
+Upload these folders/files to the repository root:
 
 - `index.html`
 - `data/`
-
-Recommended:
-
 - `docs/`
-- `downloads/`
+- `downloads/` optional
 
-This version loads CSV files from `data/`, so use GitHub Pages or a local web server for testing. Some browsers block CSV loading when opening `index.html` directly from the file system.
+Use GitHub Pages to view the dashboard. Opening `index.html` directly from a local computer may block CSV loading or live iNaturalist photo loading in some browsers.

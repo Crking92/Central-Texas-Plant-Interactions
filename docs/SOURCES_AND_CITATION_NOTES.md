@@ -1,17 +1,23 @@
 # Sources and citation notes
 
-This viewer displays sourced direct plant-animal interactions from the current dashboard data package.
+This dashboard is built from uploaded project data and source-backed interaction tables. It should be treated as a working evidence viewer, not a final peer-reviewed publication.
 
-Main evidence/source layers include:
+## Citation policy
 
-- GloBI direct plant-animal interaction records where retained by filters.
-- UDELep / Host Calculator / Texas Host Plants host records.
-- Bird Data Transfer Package: Bird_Master, Avian Diet, GloBI bird-plant records, BIRDBASE context, NestTrait context, Plant_Resource_To_Validate, and Evidence_Rules A-E.
-- LBJ Wildflower Center profile-style broad direct wildlife-use records where explicit.
-- TexasNonNatives, TexasInvasives, Texas Department of Agriculture, and City of Austin invasive/caution screens.
-- Uploaded target-zone master plant list for plant membership and recommendation gating.
-- iNaturalist photos are loaded live for plant recognition only. They are not scored as plant-animal interaction evidence.
+Each row displays the most specific citation information currently present in the exported data.
 
-Public interpretation rule:
+- If a row includes a literature citation, observation URL, specimen URL, or source URL, that detail is shown in the plant popup.
+- If a row only includes a worksheet name, such as `UDELep(1).csv`, `Bee.csv`, `Sawfly.csv`, or `gall_host_data.csv`, it is marked as a **dataset-level citation**.
+- Dataset-level rows are useful for screening and dashboard exploration, but the original publication, specimen, or observation source should be recovered before formal public citation.
 
-A blank or low interaction category means the current verified-source package has not yet captured many records for that plant/category. It does not prove the interaction is absent in nature.
+## Blanket source categories
+
+- GloBI / Global Biotic Interactions: broad interaction aggregation; use original contributor/reference where available.
+- Texas Host Plants / Host Calculator / UDELep: primary insect host backbone for Lepidoptera and related insect groups.
+- Central Texas Bird Data Transfer Package: Bird_Master parent table with Avian Diet, GloBI_BirdPlant, BIRDBASE, NestTrait, Plant_Resource_To_Validate, and Evidence_Rules.
+- National Audubon Society Native Plants data: public bird/plant resource context and broad bird-use rows.
+- Lady Bird Johnson Wildflower Center Native Plants Database: plant profile context and broad direct wildlife-use fields.
+- Central Texas Bee Relationships: bee-plant relationship evidence.
+- Hays County / Central Texas insect interaction files: regional insect interaction and direct plant-use evidence.
+- TexasNonNatives, TexasInvasives, TDA, and City of Austin lists: caution/non-native/invasive flags.
+- iNaturalist: live photo display only; not used as interaction evidence or scoring.
