@@ -1,0 +1,9 @@
+issue,rows,current_label,status
+Central Texas Host Identifier rows,6864,GloBI via Central Texas Host Identifier workbook export,Resolved with blanket GloBI / Poelen et al. 2014 citation and GlobalBioticInteractions.org link.
+Specific citation present but no clickable URL,3641,Literature citation / specimen network citation without URL,Acceptable for prototype; optional later pass can add DOI/URL links.
+Blank row citation/detail,0,not supplied,None remaining.
+UDELep / ZooKeys,23382,Shropshire & Tallamy 2025,Resolved with source-level citation and DOI.
+Bee / Fowler,435,Fowler pollen-specialist bee data,Resolved with source-level citation and URL.
+Sawfly GenUS,1902,Sawfly GenUS / IDtools,Resolved with source-level citation and URL.
+Bark beetles / Atkinson,1524,Bark and Ambrosia Beetles of the Americas,Resolved with source-level citation and URL.
+Gallformers,8526,Gallformers plant gall database,Resolved with source-level citation and URL.

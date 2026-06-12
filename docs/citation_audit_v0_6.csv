@@ -1,0 +1,9 @@
+issue,rows,current_label,recommendation
+Central Texas Host Identifier rows still need source recovery,6864,Central Texas Host Identifier workbook export,Recover the original GloBI/reference/source row or replace with a more direct source; keep visible but flagged until recovered.
+Specific citation present but no clickable URL,3641,Literature citation / specimen network citation without URL,Acceptable for prototype. Optional later pass can add DOI/URL links for major bird diet papers and specimen networks.
+Blank row citation/detail,0,not supplied,Review and remove from public score or recover source before publication.
+UDELep / ZooKeys resolved,23382,Shropshire,Resolved with blanket/source-level citation and URL.
+Bee / Fowler resolved,435,Fowler,Resolved with blanket/source-level citation and URL.
+Sawfly GenUS resolved,1902,Sawfly GenUS,Resolved with blanket/source-level citation and URL.
+Bark beetles / Atkinson resolved,1524,Atkinson,Resolved with blanket/source-level citation and URL.
+Gallformers resolved,8526,Gallformers,Resolved with blanket/source-level citation and URL.
