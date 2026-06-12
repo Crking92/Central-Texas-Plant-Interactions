@@ -1,18 +1,15 @@
 # GitHub upload notes
 
-Use `index.html` as the dashboard landing page. This file is self-contained and can run on GitHub Pages without a database.
+Upload the contents of this folder to the repository root.
 
-Suggested commit message:
-
-`Add v0.3 bird layer to ecosystem dashboard`
-
-Files most likely needed for the public site:
+Required:
 
 - `index.html`
-- `README.md`
-- `docs/SOURCES_AND_CITATION_NOTES.md`
-- `docs/CHANGELOG.md`
-- `data/bird_layer_v03/`
-- `data/v02_base/`
+- `data/`
 
-The `downloads/` folder is optional but useful for transparency and audit.
+Recommended:
+
+- `docs/`
+- `downloads/`
+
+This version loads CSV files from `data/`, so use GitHub Pages or a local web server for testing. Some browsers block CSV loading when opening `index.html` directly from the file system.
