@@ -1,0 +1,15 @@
+source,rows,notes
+Texas-Host-Plants-main.zip / verified-data.csv,36172,"Source-backed insect host records, including UDELep/host-calculator data."
+Host Calculator(3).xlsx,0,"Supplemental host-calculator workbook supplied by user; used as source context for Lepidoptera, bees, beetles, and sawflies."
+Central-Texas-Bee-Relationships-main.zip / evidence_rows.csv,4313,Bee/plant evidence rows; direct flower and food terms retained.
+Hays-County-Insect-Interactions-main.zip / central_texas_insect_interactions_simplified.csv,19856,Regional insect interaction rows; parasites/co-occurrence excluded.
+Central-Texas-Bird-Interactions-main.zip / Audubon + LBJ profile data,7683,Audubon food-guild rows plus LBJ profile direct wildlife-use terms such as Fruit-birds and Fruit-mammals.
+Central-Texas-Mammal-Interactions-main.zip / data.js,1271,Mammal plant-use candidates; heavily filtered because most raw rows were not plant-use records.
+central_texas_interactions(7).xlsx / GloBI raw,39562,Raw GloBI-style interaction data; direct animal-plant terms only.
+TexasNonNatives.org screen,809,Non-native status and Fundamental Invasiveness Index crosswalk.
+TexasInvasives / TDA / City of Austin invasive screen,0,Known/suspected invasive and noxious caution crosswalk.
+Central_Texas_Bird_Data_Transfer_Package_2026_06_12.xlsx / Bird_Master,453,Parent Central Texas bird table used for occurrence/taxonomy; child evidence joined by bird_id.
+Central_Texas_Bird_Data_Transfer_Package_2026_06_12.xlsx / Bird_Diet_AvianDiet,3118,Kept as evidence table for bird diet records; plant resources are scored only when plant taxon is specific enough and recommendation is gated by validation.
+Central_Texas_Bird_Data_Transfer_Package_2026_06_12.xlsx / GloBI_BirdPlant,165,Kept as evidence table for direct bird-plant/flower rows; B/C grades follow Evidence_Rules.
+Central_Texas_Bird_Data_Transfer_Package_2026_06_12.xlsx / BIRDBASE + NestTrait,906,"Joined as bird context, diet/habitat/nesting traits; not treated as plant-specific evidence by itself."
+Central_Texas_Bird_Data_Transfer_Package_2026_06_12.xlsx / Plant_Resource_To_Validate + Evidence_Rules,436,Validation gate and A-E evidence rules used before plant-resource recommendations.

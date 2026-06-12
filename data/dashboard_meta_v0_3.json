@@ -1,0 +1,20 @@
+{
+  "title": "Central Texas Ecosystem Dashboard Viewer",
+  "version": "v0.3 HTML viewer; v0.2 dashboard plus Bird Data Transfer Package bird layer",
+  "built": "2026-06-12",
+  "plantCount": 5370,
+  "targetCount": 316,
+  "reviewCount": 5054,
+  "flaggedCount": 182,
+  "highFlaggedCount": 91,
+  "plantsWithInteractions": 5364,
+  "interactionCount": 50949,
+  "texasNonNativeMatches": 161,
+  "invasiveMatches": 65,
+  "notes": "Direct interactions only. Bird layer v0.3 uses Bird_Master as the parent table, joins AvianDiet/GloBI/BIRDBASE/NestTrait by bird_id, keeps Avian Diet and GloBI as evidence tables, and gates plant recommendations through Plant_Resource_To_Validate.",
+  "profileDirectUseRowsAdded": 208,
+  "birdLayerEvidenceRows": 1625,
+  "birdLayerViewerRowsAdded": 1308,
+  "birdMasterRows": 453,
+  "birdResourceValidationRows": 436
+}
