@@ -1,17 +1,9 @@
-# GitHub upload notes
+# GitHub upload notes for v0.10
 
-Upload the contents of this folder to the dashboard repository root.
+Upload these files/folders to the repository root:
 
-Required:
 - `index.html`
-- `data/dashboard_plants_v0_3.csv`
-- `data/dashboard_sources_v0_3.csv`
-- `data/dashboard_filters_v0_3.csv`
-- `data/dashboard_interactions_v0_3_part1.csv`
-- `data/dashboard_interactions_v0_3_part2.csv`
-- `data/dashboard_interactions_v0_3_part3.csv`
-
-Optional but recommended:
+- `data/`
 - `docs/`
 
-Do not upload any older large single-file HTML builds or the unsplit `dashboard_interactions_v0_3.csv`.
+The interaction dataset is split into three CSV files to stay under GitHub file-size limits. Do not upload older single-file HTML builds that embed all data.
