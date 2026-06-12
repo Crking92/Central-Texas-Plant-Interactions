@@ -1,7 +1,17 @@
 # GitHub upload notes
 
-Upload `index.html`, the `data/` folder, and the `docs/` folder to the repository root.
+Upload the contents of this folder to the dashboard repository root.
 
-The interaction table is split into multiple CSV files so every file stays below GitHub's upload limit. Keep all files in `data/` together.
+Required:
+- `index.html`
+- `data/dashboard_plants_v0_3.csv`
+- `data/dashboard_sources_v0_3.csv`
+- `data/dashboard_filters_v0_3.csv`
+- `data/dashboard_interactions_v0_3_part1.csv`
+- `data/dashboard_interactions_v0_3_part2.csv`
+- `data/dashboard_interactions_v0_3_part3.csv`
 
-The dashboard loads CSV files from `data/`, so it should be viewed through GitHub Pages rather than by opening `index.html` directly from a local file path.
+Optional but recommended:
+- `docs/`
+
+Do not upload any older large single-file HTML builds or the unsplit `dashboard_interactions_v0_3.csv`.

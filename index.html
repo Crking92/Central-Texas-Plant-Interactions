@@ -54,11 +54,11 @@ h1{margin:0 0 8px;font-size:clamp(26px,4vw,44px);letter-spacing:-.03em} h2{margi
 const $=s=>document.querySelector(s), $$=s=>Array.from(document.querySelectorAll(s));
 const esc=s=>String(s??'').replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
 const num=s=>{const n=parseFloat(s);return Number.isFinite(n)?n:0};
-const DATA={plants:[],interactions:null,interactionRows:null};
+const DATA={plants:[],sources:[],filters:[],interactions:null,interactionRows:null};
 const selected=new Set();
 const datasetOnlyCites=new Set(['verified-data.csv','evidence_rows.csv','simplified.csv','data.js']);
 const sourceStatements=[
-  ['Global Biotic Interactions (GloBI)','Used for species-interaction records. GloBI is an open infrastructure for biodiversity interaction data; original contributor citations are retained when available.','https://www.globalbioticinteractions.org/'],
+  ['Global Biotic Interactions (GloBI)','Used for species-interaction records. Some original database links may point to raw observation, specimen, or photo pages; the public viewer summarizes these records instead of showing every raw link.','https://www.globalbioticinteractions.org/'],
   ['UDELep / ZooKeys Lepidoptera host records','Used for butterfly, skipper, and moth larval host records.','https://doi.org/10.3897/zookeys.1261.160796'],
   ['Sawfly GenUS / IDtools','Used for sawfly host records. Sawflies are plant-feeding wasp relatives; these records are shown as direct plant-tissue host use.','https://idtools.org/sawfly/index.cfm'],
   ['Bark and Ambrosia Beetles of the Americas','Used for bark and ambrosia beetle host-plant records.','https://barkbeetles.info/americas_index.php'],
@@ -69,7 +69,7 @@ const sourceStatements=[
   ['Lady Bird Johnson Wildflower Center Native Plants Database','Used for native plant profile context and broad direct wildlife-use fields, such as fruit used by birds or mammals, when explicit.','https://www.wildflower.org/plants/'],
   ['Central Texas bee and insect records','Used for regional insect interaction records after filtering to direct plant-tissue or flower-use relationships.',''],
   ['TexasNonNatives, TexasInvasives, Texas Department of Agriculture, and City of Austin invasive lists','Used for non-native, invasive, noxious, and caution labels. These labels affect recommendation status, not whether an interaction record remains visible.','https://texasnonnatives.org/'],
-  ['iNaturalist photos','Photos are loaded live for plant recognition and visual context only. They are not used as evidence for plant-animal interactions or scoring.','https://www.inaturalist.org/']
+  ['iNaturalist photos','Plant photos are loaded live for visual context only. They are not used as evidence for plant-animal interactions or scoring. Raw iNaturalist observation links from interaction datasets are not shown as public citations unless they are part of a clearly labeled source record.','https://www.inaturalist.org/']
 ];
 function parseCSV(text){const rows=[];let row=[],cell='',q=false;for(let i=0;i<text.length;i++){const c=text[i],n=text[i+1];if(q){if(c==='"'&&n==='"'){cell+='"';i++;}else if(c==='"')q=false;else cell+=c;}else{if(c==='"')q=true;else if(c===','){row.push(cell);cell='';}else if(c==='\n'){row.push(cell);rows.push(row);row=[];cell='';}else if(c!=='\r')cell+=c;}}if(cell||row.length){row.push(cell);rows.push(row);}const head=rows.shift()||[];return rows.filter(r=>r.some(x=>x!=='')).map(r=>Object.fromEntries(head.map((h,i)=>[h,r[i]??''])))}
 async function loadCSV(path){const res=await fetch(path);if(!res.ok)throw new Error(path);return parseCSV(await res.text())}
@@ -92,16 +92,67 @@ function groupRank(g){const i=groupOrder.indexOf(g); return i<0?999:i}
 function groupLabel(g){if(g==='Butterflies & moths')return 'Lepidoptera: butterflies & moths';if(g==='Native bees')return 'Bees: native bees';if(g==='Honey bees (non-native)')return 'Bees: honey bees (non-native)';return g||'Other';}
 function groupRows(rows){const m={};for(const r of rows){const g=r.group||'Other';(m[g]||(m[g]=[])).push(r)}return Object.entries(m).sort((a,b)=>groupRank(a[0])-groupRank(b[0])||b[1].length-a[1].length)}
 function publicLayer(x){x=String(x||'').toLowerCase(); if(x.includes('target'))return 'Target-zone plant list'; if(x.includes('review'))return 'Review-only plant'; return x||'Plant record';}
-function publicCitation(r){const cit=String(r.citations||'').trim(); return cit||'Citation not supplied in this row.';}
-function sourceNote(r){const src=String(r.sources||''), cit=String(r.citations||''); const combo=src+' '+cit; if(combo.includes('UDELep'))return 'Lepidoptera host record.'; if(combo.includes('Sawfly'))return 'Sawfly host record.'; if(combo.includes('Bark')||combo.includes('beetle'))return 'Beetle host record.'; if(combo.includes('Fowler')||combo.includes('bee'))return 'Bee relationship record.'; if(combo.includes('Gallformers')||combo.includes('gall'))return 'Gall-maker host record.'; if(combo.includes('GloBI')||combo.includes('Global Biotic Interactions'))return 'Global Biotic Interactions record.'; if(combo.includes('Audubon'))return 'Broad bird-plant resource record; scored conservatively.'; if(combo.includes('Bird diet'))return 'Bird diet literature record.'; if(combo.includes('Lady Bird'))return 'Broad wildlife-use profile record; scored conservatively.'; return 'Source-backed interaction record.';}
-function linksFrom(r){const vals=[];for(const key of ['urls','citations']){String(r[key]||'').split('|').forEach(v=>{v=v.trim();if(/^https?:\/\//.test(v))vals.push(v)})}return [...new Set(vals)].slice(0,5).map((u,i)=>`<a href="${esc(u)}" target="_blank" rel="noopener">link ${i+1}</a>`).join(' ')}
-function rowTable(rows){return `<div class="tablewrap"><table><thead><tr><th>Animal</th><th>Interaction</th><th>Plant part</th><th>Life stage</th><th>Evidence</th><th>Citation / record link</th></tr></thead><tbody>${rows.map(r=>`<tr><td><b><i>${esc(r.animal||'Unspecified')}</i></b><div class="small">${esc(r.common||'')}</div><div class="small">${esc(r.rank||'')}</div></td><td>${esc(r.category||r.raw||'')}</td><td>${esc(r.part||'')}</td><td>${esc(r.stage||'')}</td><td>${esc(r.evidence||'')}</td><td class="sourceCell"><div class="specific">${esc(publicCitation(r))}</div><div class="src">${esc(sourceNote(r))}</div><div class="linklist">${linksFrom(r)}</div></td></tr>`).join('')}</tbody></table></div>`}
+function publicCitation(r){
+  const src=String(r.sources||''), cit=String(r.citations||'').trim();
+  const combo=(src+' '+cit);
+  if(combo.includes('Central Texas Host Identifier')||combo.includes('GloBI')||combo.includes('Global Biotic Interactions')) return 'Global Biotic Interactions (GloBI) species-interaction record.';
+  if(src.includes('Texas Host Plants')||combo.includes('UDELep')||combo.includes('Shropshire')) return 'UDELep / ZooKeys Lepidoptera host record.';
+  if(combo.includes('Sawfly GenUS')||combo.includes('IDtools')) return 'Sawfly GenUS / IDtools host record.';
+  if(combo.includes('Atkinson')||combo.includes('Bark and ambrosia beetles')) return 'Bark and Ambrosia Beetles of the Americas host record.';
+  if(combo.includes('Fowler')) return 'Fowler pollen-specialist bee relationship record.';
+  if(combo.includes('Gallformers')) return 'Gallformers plant-gall host record.';
+  if(combo.includes('National Audubon Society')) return 'National Audubon Society Native Plants Database record.';
+  if(combo.includes('LBJ Wildflower')) return 'Lady Bird Johnson Wildflower Center plant profile record.';
+  if(combo.includes('AvianDiet')||src.includes('Bird_Diet_AvianDiet')) return 'Bird diet literature record.';
+  if(/^https?:\/\//.test(cit)) return 'External observation or database record.';
+  return cit||'Source-backed record.';
+}
+function sourceNote(r){
+  const cit=(r.citations||'').trim(), src=(r.sources||'').trim();
+  const combo=(src+' '+cit);
+  let note='Source-backed direct interaction record.';
+  if(combo.includes('UDELep')||combo.includes('Shropshire')||src.includes('Texas Host Plants')) note='Butterfly, skipper, or moth host-plant record.';
+  else if(combo.includes('Sawfly GenUS')||combo.includes('IDtools')) note='Sawfly plant-host record.';
+  else if(combo.includes('Atkinson')||combo.includes('Bark and ambrosia beetles')) note='Bark or ambrosia beetle host record.';
+  else if(combo.includes('Fowler')) note='Pollen-specialist bee relationship.';
+  else if(combo.includes('Gallformers')) note='Gall-maker host record.';
+  else if(combo.includes('GloBI')||combo.includes('Global Biotic Interactions')||combo.includes('Central Texas Host Identifier')) note='Aggregated species-interaction record; raw observation/photo links are kept out of the public row to avoid confusing them with formal citations.';
+  if(combo.includes('Audubon')) note='Broad bird-plant resource record; scored conservatively.';
+  if(combo.includes('AvianDiet')||src.includes('Bird_Diet_AvianDiet')) note='Bird diet literature record.';
+  if(src.includes('LBJ Wildflower')) note='Broad wildlife-use profile record; scored conservatively.';
+  return note;
+}
+function canonicalLinksFor(r){
+  const src=String(r.sources||''), cit=String(r.citations||'').trim();
+  const combo=src+' '+cit;
+  const links=[];
+  function add(label,url){if(!links.some(x=>x.url===url))links.push({label,url});}
+  if(combo.includes('Central Texas Host Identifier')||combo.includes('GloBI')||combo.includes('Global Biotic Interactions')){
+    add('GloBI source','https://www.globalbioticinteractions.org/');
+    return links;
+  }
+  if(src.includes('Texas Host Plants')||combo.includes('UDELep')||combo.includes('Shropshire')) add('Lepidoptera source','https://doi.org/10.3897/zookeys.1261.160796');
+  if(combo.includes('Sawfly GenUS')||combo.includes('IDtools')) add('Sawfly source','https://idtools.org/sawfly/index.cfm');
+  if(combo.includes('Atkinson')||combo.includes('Bark and ambrosia beetles')) add('Beetle source','https://barkbeetles.info/americas_index.php');
+  if(combo.includes('Fowler')) add('Bee source','https://jarrodfowler.com/bees_pollen.html');
+  if(combo.includes('Gallformers')) add('Gall source','https://www.gallformers.org/');
+  if(combo.includes('National Audubon Society')) add('Audubon source','https://www.audubon.org/native-plants');
+  if(combo.includes('LBJ Wildflower')) add('LBJ source','https://www.wildflower.org/plants/');
+  const doiMatch=combo.match(/10\.\d{4,9}\/[-._;()\/:A-Z0-9]+/i);
+  if(doiMatch && !/10\.1016\/j\.ecoinf\.2014\.08\.005/i.test(doiMatch[0])) add('DOI', 'https://doi.org/'+doiMatch[0].replace(/[.,;]+$/,''));
+  return links.slice(0,4);
+}
+function linksFrom(r){
+  const links=canonicalLinksFor(r);
+  return links.map(x=>`<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.label)}</a>`).join(' ');
+}
+function rowTable(rows){return `<div class="tablewrap"><table><thead><tr><th>Animal</th><th>Interaction</th><th>Plant part</th><th>Life stage</th><th>Evidence</th><th>Source summary</th></tr></thead><tbody>${rows.map(r=>{const l=linksFrom(r);return `<tr><td><b><i>${esc(r.animal||'Unspecified')}</i></b><div class="small">${esc(r.common||'')}</div><div class="small">${esc(r.rank||'')}</div></td><td>${esc(r.category||r.raw||'')}</td><td>${esc(r.part||'')}</td><td>${esc(r.stage||'')}</td><td>${esc(r.evidence||'')}</td><td class="sourceCell"><div class="specific">${esc(publicCitation(r))}</div><div class="src">${esc(sourceNote(r))}</div>${l?`<div class="linklist">${l}</div>`:''}</td></tr>`}).join('')}</tbody></table></div>`}
 async function loadINatPhotos(p){const target=$('#inatPhotos'); if(!target)return; target.innerHTML='<div class="small">Loading photos...</div>';try{const url='https://api.inaturalist.org/v1/observations?taxon_name='+encodeURIComponent(p.name)+'&photos=true&per_page=4&order=desc&order_by=votes';const res=await fetch(url);if(!res.ok)throw new Error('inat');const js=await res.json();const obs=(js.results||[]).filter(o=>o.photos&&o.photos.length).slice(0,4);if(!obs.length){target.innerHTML='<div class="small">No iNaturalist photos found for this exact plant name.</div>';return;}target.innerHTML='<div class="photoGrid">'+obs.map(o=>{const ph=o.photos[0];const img=(ph.url||'').replace('square.','medium.');const user=o.user&&o.user.login?o.user.login:'iNaturalist user';return `<div class="photoCard"><a href="https://www.inaturalist.org/observations/${esc(o.id)}" target="_blank" rel="noopener"><img src="${esc(img)}" alt="${esc(p.name)} photo from iNaturalist"></a><div class="cap">Photo via iNaturalist observation ${esc(o.id)} by ${esc(user)}. Visual reference only.</div></div>`}).join('')+'</div>';}catch(e){target.innerHTML='<div class="small">Photos could not be loaded right now.</div>';}}
 async function openPlant(id){const p=DATA.plants.find(x=>x.id===id); if(!p)return;$('#modalTitle').innerHTML=`<span class="plantname">${esc(p.name)}</span>`;$('#modalSub').textContent=`${p.common||''} • ${publicLayer(p.layer)} • ${p.claims.toLocaleString()} direct claims`;$('#modalBody').innerHTML='<div class="empty">Opening plant details...</div>';$('#modal').classList.add('open');try{await ensureInteractions();}catch(e){$('#modalBody').innerHTML='<div class="badbox">Plant details could not load right now. Please refresh the page.</div>';return;}const rows=DATA.interactions[id]||[];const flagBoxes=p.flags.length?p.flags.map(f=>`<div class="${p.flagLevel==='high'?'badbox':'warnbox'}">${esc(f)}</div>`).join(''):'<div class="notice">No non-native or invasive flag is attached in the current screening files.</div>';const summaryRows=groupRows(rows).map(([g,rs])=>{const species=new Set(rs.filter(r=>r.rank==='species').map(r=>r.animal)).size;return `<tr><td>${esc(groupLabel(g))}</td><td>${rs.length}</td><td>${species}</td></tr>`}).join('')||'<tr><td colspan="3" class="empty">No detailed rows loaded.</td></tr>';const details=groupRows(rows).map(([g,rs],i)=>`<details ${i<3?'open':''}><summary>${esc(groupLabel(g))} <span class="small">${rs.length.toLocaleString()} record${rs.length===1?'':'s'}</span></summary>${rowTable(rs.slice(0,500))}${rs.length>500?`<div class="notice">Showing first 500 of ${rs.length.toLocaleString()} records in this group. Additional records are available in the full dataset.</div>`:''}</details>`).join('')||'<div class="empty">No interaction examples available.</div>';$('#modalBody').innerHTML=`${flagBoxes}<div>${valueLabels(p)}</div><div class="detailgrid"><div class="detail"><div class="dlabel">Public grade</div><div class="dval">${esc(plantGrade(p))}</div></div><div class="detail"><div class="dlabel">Research grade</div><div class="dval">${esc(p.researchGrade||'')}</div></div><div class="detail"><div class="dlabel">Direct claims</div><div class="dval">${p.claims.toLocaleString()}</div></div><div class="detail"><div class="dlabel">Animal group diversity</div><div class="dval">${p.diversity}</div></div></div><div class="card"><h3>Plant photos</h3><div class="small">Photos load from iNaturalist for plant recognition only. They are not interaction evidence and do not affect scores.</div><div id="inatPhotos"></div></div><div class="twocol"><div class="card"><h3>Scores</h3>${scoreLine('Overall / research',p.scores.overall)}${scoreLine('Insect host',p.scores.host)}${scoreLine('Pollinator',p.scores.pollinator)}${scoreLine('Bird direct use',p.scores.bird)}${scoreLine('Mammal direct use',p.scores.mammal)}${scoreLine('Evidence strength',p.scores.evidence)}${scoreLine('Target/local confidence',p.scores.locality)}</div><div class="card"><h3>Status note</h3><p>${esc(p.note||'')}</p><p><b>Native/status:</b> ${esc(p.nativeStatus||'')}</p><p><b>Membership:</b> ${esc(p.membership||'')}</p><p><b>Dashboard status:</b> ${esc(p.publicStatus||'')}</p></div></div><h3>Interaction summary by animal group</h3><div class="tablewrap"><table><thead><tr><th>Animal group</th><th>Claims</th><th>Species-level animals</th></tr></thead><tbody>${summaryRows}</tbody></table></div><h3>Interaction details by group</h3><div class="groupDetails">${details}</div>`;loadINatPhotos(p);}
 window.openPlant=openPlant;
 function renderFlagTable(){const flagged=DATA.plants.filter(p=>p.flags.length).sort((a,b)=>a.name.localeCompare(b.name));$('#flagTable tbody').innerHTML=flagged.flatMap(p=>p.flags.map(f=>`<tr><td><div class="plantname">${esc(p.name)}</div><div class="small">${esc(p.common||'')}</div></td><td>${esc(publicLayer(p.layer))}</td><td>${esc((f.match(/type: ([^;]+)/)||[])[1]||'Flag')}</td><td>${esc((f.match(/rank: ([^;]+)/)||f.match(/status: ([^;]+)/)||f.match(/severity: ([^;]+)/)||[])[1]||'Review')}</td><td>${esc((f.match(/action: ([^;]+)/)||[])[1]||'Review before recommendation')}</td><td>${p.claims}</td></tr>`)).join('')||'<tr><td colspan="6" class="empty">No flags loaded.</td></tr>';}
 function renderMethods(){ $('#sourceStatements').innerHTML=sourceStatements.map(([name,txt,url])=>`<div class="sourceitem"><b>${esc(name)}</b><br>${esc(txt)}${url?`<div class="src"><a href="${esc(url)}" target="_blank" rel="noopener">source site</a></div>`:''}</div>`).join('');}
-async function init(){try{const plants=await loadCSV('data/dashboard_plants_v0_3.csv');DATA.plants=plants.map(plantFromRow);renderKpis();renderFlagTable();renderMethods();filterPlants();}catch(e){console.error(e);$('#plantTable tbody').innerHTML='<tr><td colspan="8" class="empty">Plant data could not load. Please refresh the page.</td></tr>';}}
+async function init(){try{const [plants,sources,filters]=await Promise.all([loadCSV('data/dashboard_plants_v0_3.csv'),loadCSV('data/dashboard_sources_v0_3.csv'),loadCSV('data/dashboard_filters_v0_3.csv')]);DATA.plants=plants.map(plantFromRow);DATA.sources=sources;DATA.filters=filters;renderKpis();renderFlagTable();renderMethods();filterPlants();}catch(e){console.error(e);$('#plantTable tbody').innerHTML='<tr><td colspan="8" class="empty">Plant data could not load. Please refresh the page.</td></tr>';}}
 $$('input,select').forEach(el=>el.addEventListener('input',filterPlants));$('#resetFilters').addEventListener('click',()=>{$('#q').value='';$('#layer').value='all';$('#flags').value='all';$('#strength').value='all';$('#rank').value='all';$('#sort').value='score';filterPlants();});$('#clearCompare').addEventListener('click',()=>{selected.clear();renderCompare();filterPlants();});$('#closeModal').addEventListener('click',()=>$('#modal').classList.remove('open'));$('#closeIntro').addEventListener('click',()=>$('#introModal').classList.remove('open'));$('#closeIntro2').addEventListener('click',()=>$('#introModal').classList.remove('open'));$('#modal').addEventListener('click',e=>{if(e.target.id==='modal')$('#modal').classList.remove('open');});$$('.tab').forEach(b=>b.addEventListener('click',()=>{$$('.tab').forEach(x=>x.classList.remove('active'));b.classList.add('active');$$('.tabpane').forEach(x=>x.classList.add('hidden'));$('#'+b.dataset.tab).classList.remove('hidden');}));init();
 </script>
 </body>
