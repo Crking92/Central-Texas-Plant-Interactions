@@ -1,12 +1,24 @@
 # Sources and citation notes
 
-The dashboard uses source-backed direct plant-animal interaction records. It does not claim to show every interaction that occurs in nature.
+This dashboard shows source-backed direct plant-animal interactions currently in the dataset. There are more interactions in nature than shown here.
 
-Main source families include Global Biotic Interactions (GloBI), UDELep / ZooKeys Lepidoptera host records, Sawfly GenUS / IDtools, Bark and Ambrosia Beetles of the Americas, Fowler pollen-specialist bee data, Gallformers, bird diet and bird-plant resource records, National Audubon Society Native Plants Database, Lady Bird Johnson Wildflower Center Native Plants Database, TexasNonNatives, TexasInvasives, Texas Department of Agriculture, City of Austin invasive plant resources, and iNaturalist photos for visual reference only.
+Major source families include:
 
-Non-native or invasive labels affect recommendation status. They do not erase documented plant-animal interactions.
+- Global Biotic Interactions (GloBI) for species-interaction records.
+- UDELep / ZooKeys Lepidoptera host records.
+- Sawfly GenUS / IDtools host records.
+- Bark and Ambrosia Beetles of the Americas host records.
+- Jarrod Fowler pollen-specialist bee records.
+- Gallformers plant gall host records.
+- National Audubon Society Native Plants Database.
+- Lady Bird Johnson Wildflower Center Native Plants Database.
+- Bird diet literature records.
+- The Mammals of Texas mammal plant-use and soil-engineering records.
 
+## Native plant interpretation
 
-## Mammal layer added in v0.13
+The dashboard treats target-zone native plants as stronger restoration recommendations because local native plants often have deeper food-web relationships with local insects, birds, and mammals. Non-native plants can still have documented animal use, but the balanced recommendation score reduces them. Invasive or high-caution plants are strongly reduced and should not be promoted as habitat recommendations without careful management review.
 
-Mammal plant-food/use records are imported from the final mammal dashboard handoff workbook, primarily using The Mammals of Texas, Seventh Edition (Schmidly & Bradley; DOI: 10.7560/308868). Species-level plant records are used directly when mapped to a dashboard plant. Genus, species-complex, and functional-group records are retained and scored conservatively. Review-only resources are not promoted as planting recommendations until native-zone validation is complete.
+## Photo note
+
+iNaturalist photos shown in the dashboard are visual aids for recognition only. They are not treated as interaction evidence and do not affect scores.
