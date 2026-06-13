@@ -1,0 +1,191 @@
+interaction_record_id,plant_name,rank,mapped_count,mapped_ids,weight,action
+MOT_PLANT_0002,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0003,herbaceous forb functional group,functional_group,1,MAMMALPLT0001,0.12,import_functional_group
+MOT_PLANT_0004,Prosopis glandulosa,species,1,CAND3512,0.488,direct_import_species
+MOT_PLANT_0005,Prosopis glandulosa,species,1,CAND3512,0.488,direct_import_species
+MOT_PLANT_0006,Opuntia engelmannii complex,species_complex,2,PLT0238|CAND3022,0.325,direct_import_species_review
+MOT_PLANT_0007,Poaceae,family/functional_group,1,CAND3417,0.104,import_functional_group
+MOT_PLANT_0008,herbaceous forb functional group,functional_group,1,MAMMALPLT0001,0.104,import_functional_group
+MOT_PLANT_0009,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0010,herbaceous forb functional group,functional_group,1,MAMMALPLT0001,0.12,import_functional_group
+MOT_PLANT_0011,Prosopis glandulosa,species,1,CAND3512,0.562,direct_import_species
+MOT_PLANT_0012,Cactaceae / Cylindropuntia spp.,family_genus_group,1,CAND0725,0.165,import_genus_or_group_only
+MOT_PLANT_0013,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0014,herbaceous forb functional group,functional_group,1,MAMMALPLT0001,0.12,import_functional_group
+MOT_PLANT_0016,Quercus spp.,genus,7,PLT0280|PLT0275|PLT0277|PLT0274|PLT0276|PLT0278|PLT0279,0.211,import_genus_or_review_species
+MOT_PLANT_0017,Quercus spp.,genus,7,PLT0280|PLT0275|PLT0277|PLT0274|PLT0276|PLT0278|PLT0279,0.211,import_genus_or_review_species
+MOT_PLANT_0018,Quercus spp.,genus,7,PLT0280|PLT0275|PLT0277|PLT0274|PLT0276|PLT0278|PLT0279,0.211,import_genus_or_review_species
+MOT_PLANT_0019,Quercus spp.,genus,7,PLT0280|PLT0275|PLT0277|PLT0274|PLT0276|PLT0278|PLT0279,0.211,import_genus_or_review_species
+MOT_PLANT_0020,Acer spp.,genus,2,PLT0243|PLT0242,0.27,import_genus_or_review_species
+MOT_PLANT_0021,Quercus spp.,genus,7,PLT0280|PLT0275|PLT0277|PLT0274|PLT0276|PLT0278|PLT0279,0.211,import_genus_or_review_species
+MOT_PLANT_0022,Diospyros texana / Diospyros virginiana,species_pair,2,PLT0252|PLT0253,0.39,direct_import_species_review
+MOT_PLANT_0024,Agave spp.,genus,1,PLT0232,0.234,import_genus_or_review_species
+MOT_PLANT_0025,Juniperus ashei / Juniperus spp.,species_or_genus,2,PLT0260|PLT0261,0.315,direct_import_species_review
+MOT_PLANT_0026,Prosopis glandulosa,species,1,CAND3512,0.562,direct_import_species
+MOT_PLANT_0027,Mahonia trifoliolata,species,3,PLT0197|CAND0579|CAND0162,0.562,direct_import_species
+MOT_PLANT_0029,Trifolium spp.,genus,1,CAND4714,0.27,hold_review
+MOT_PLANT_0031,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0032,herbaceous forb functional group,functional_group,1,MAMMALPLT0001,0.12,import_functional_group
+MOT_PLANT_0033,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0034,Opuntia engelmannii complex,species_complex,2,PLT0238|CAND3022,0.375,direct_import_species_review
+MOT_PLANT_0035,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0036,Brassicaceae,family,1,CAND0680,0.105,import_family_group_only
+MOT_PLANT_0037,Amaranthaceae,family,1,MAMMALPLT0002,0.105,import_family_group_only
+MOT_PLANT_0038,Salix spp.,genus,1,PLT0283,0.27,import_genus_or_review_species
+MOT_PLANT_0039,Populus deltoides,species,1,PLT0268,0.562,direct_import_species
+MOT_PLANT_0040,Cyperaceae / Carex-Cyperus-Eleocharis spp.,family/genus_group,1,CAND1357,0.165,import_functional_group
+MOT_PLANT_0041,Prosopis glandulosa,species,1,CAND3512,0.488,direct_import_species
+MOT_PLANT_0042,Salix spp.,genus,1,PLT0283,0.234,import_genus_or_review_species
+MOT_PLANT_0043,Chilopsis linearis,species,1,PLT0250,0.488,direct_import_species
+MOT_PLANT_0045,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0046,Juniperus ashei / Juniperus spp.,species_or_genus,2,PLT0260|PLT0261,0.315,direct_import_species_review
+MOT_PLANT_0047,Juniperus ashei / Juniperus spp.,species_or_genus,2,PLT0260|PLT0261,0.315,direct_import_species_review
+MOT_PLANT_0048,Pinus spp.,genus,1,CAND3281,0.27,hold_region_review
+MOT_PLANT_0049,Pinus spp.,genus,1,CAND3281,0.27,hold_region_review
+MOT_PLANT_0050,Cyperaceae / Carex-Cyperus-Eleocharis spp.,family/genus_group,1,CAND1357,0.165,import_functional_group
+MOT_PLANT_0056,Quercus spp.,genus,7,PLT0280|PLT0275|PLT0277|PLT0274|PLT0276|PLT0278|PLT0279,0.211,import_genus_or_review_species
+MOT_PLANT_0057,Juniperus ashei / Juniperus spp.,species_or_genus,2,PLT0260|PLT0261,0.315,direct_import_species_review
+MOT_PLANT_0058,Juniperus ashei / Juniperus spp.,species_or_genus,2,PLT0260|PLT0261,0.315,direct_import_species_review
+MOT_PLANT_0059,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0060,Cyperaceae / Carex-Cyperus-Eleocharis spp.,family/genus_group,1,CAND1357,0.165,import_functional_group
+MOT_PLANT_0061,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0062,Andropogon / Schizachyrium spp.,genus_group,1,CAND0279,0.21,import_functional_group
+MOT_PLANT_0063,Prosopis glandulosa,species,1,CAND3512,0.562,direct_import_species
+MOT_PLANT_0064,Prosopis glandulosa,species,1,CAND3512,0.562,direct_import_species
+MOT_PLANT_0065,Opuntia engelmannii complex,species_complex,2,PLT0238|CAND3022,0.375,direct_import_species_review
+MOT_PLANT_0066,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0067,Ilex vomitoria,species,1,PLT0214,0.488,direct_import_species
+MOT_PLANT_0068,Quercus spp.,genus,7,PLT0280|PLT0275|PLT0277|PLT0274|PLT0276|PLT0278|PLT0279,0.183,import_genus_or_review_species
+MOT_PLANT_0069,Celtis spp.,genus,1,PLT0183,0.234,import_genus_or_review_species
+MOT_PLANT_0070,Morus spp. / Callicarpa americana,common_name_conflict,3,PLT0265|PLT0264|PLT0182,0.078,hold_review_common_name
+MOT_PLANT_0071,Smilax spp.,genus,1,CAND4295,0.234,import_genus_or_review_species
+MOT_PLANT_0072,Nekemias arborea,species,1,CAND2918,0.488,direct_import_species
+MOT_PLANT_0073,Berchemia scandens,species,1,CAND0581,0.488,direct_import_species_review
+MOT_PLANT_0074,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0075,Cyperaceae / Carex-Cyperus-Eleocharis spp.,family/genus_group,1,CAND1357,0.165,import_functional_group
+MOT_PLANT_0076,Andropogon / Schizachyrium spp.,genus_group,1,CAND0279,0.21,import_functional_group
+MOT_PLANT_0077,Sporobolus / Spartina spp.,genus_group,1,CAND4429,0.21,import_genus_or_group_only
+MOT_PLANT_0079,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0081,Prosopis glandulosa,species,1,CAND3512,0.488,direct_import_species
+MOT_PLANT_0082,Juniperus ashei / Juniperus spp.,species_or_genus,2,PLT0260|PLT0261,0.273,direct_import_species_review
+MOT_PLANT_0083,Agave lechuguilla,species,1,CAND0129,0.488,hold_region_review
+MOT_PLANT_0084,Dasylirion texanum / Dasylirion spp.,species_or_genus,1,PLT0233,0.273,direct_import_species_review
+MOT_PLANT_0085,herbaceous forb functional group,functional_group,1,MAMMALPLT0001,0.104,import_functional_group
+MOT_PLANT_0086,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0087,herbaceous forb functional group,functional_group,1,MAMMALPLT0001,0.12,import_functional_group
+MOT_PLANT_0088,Cercocarpus montanus complex,species_complex,1,MAMMALPLT0003,0.375,hold_region_review
+MOT_PLANT_0089,herbaceous forb functional group,functional_group,1,MAMMALPLT0001,0.104,import_functional_group
+MOT_PLANT_0090,Quercus spp.,genus,7,PLT0280|PLT0275|PLT0277|PLT0274|PLT0276|PLT0278|PLT0279,0.211,import_genus_or_review_species
+MOT_PLANT_0091,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0092,herbaceous forb functional group,functional_group,1,MAMMALPLT0001,0.12,import_functional_group
+MOT_PLANT_0093,Diospyros texana,species,1,PLT0252,0.488,direct_import_species
+MOT_PLANT_0094,Diospyros texana / Diospyros virginiana,species_pair,2,PLT0252|PLT0253,0.338,direct_import_species_review
+MOT_PLANT_0095,Quercus fusiformis / Quercus virginiana complex,species_complex,2,PLT0275|PLT0280,0.325,direct_import_species_review
+MOT_PLANT_0096,Quercus fusiformis / Quercus virginiana complex,species_complex,2,PLT0275|PLT0280,0.325,direct_import_species_review
+MOT_PLANT_0097,Quercus fusiformis / Quercus virginiana complex,species_complex,2,PLT0275|PLT0280,0.325,direct_import_species_review
+MOT_PLANT_0098,Quercus buckleyi,species,1,PLT0274,0.488,direct_import_species
+MOT_PLANT_0099,Quercus buckleyi,species,1,PLT0274,0.488,direct_import_species
+MOT_PLANT_0100,Quercus spp.,genus,7,PLT0280|PLT0275|PLT0277|PLT0274|PLT0276|PLT0278|PLT0279,0.183,import_genus_or_review_species
+MOT_PLANT_0101,Prosopis glandulosa,species,1,CAND3512,0.488,direct_import_species
+MOT_PLANT_0102,Prosopis glandulosa,species,1,CAND3512,0.488,direct_import_species
+MOT_PLANT_0103,Forestiera pubescens,species,1,PLT0190,0.488,direct_import_species
+MOT_PLANT_0104,Opuntia engelmannii complex,species_complex,2,PLT0238|CAND3022,0.325,direct_import_species_review
+MOT_PLANT_0105,Poaceae,family/functional_group,1,CAND3417,0.104,import_functional_group
+MOT_PLANT_0106,herbaceous forb functional group,functional_group,1,MAMMALPLT0001,0.104,import_functional_group
+MOT_PLANT_0107,Eleocharis spp.,genus,1,CAND1596,0.234,import_genus_or_review_species
+MOT_PLANT_0110,Poaceae,family/functional_group,1,CAND3417,0.104,import_functional_group
+MOT_PLANT_0111,herbaceous forb functional group,functional_group,1,MAMMALPLT0001,0.104,import_functional_group
+MOT_PLANT_0112,Quercus fusiformis / Quercus virginiana complex,species_complex,2,PLT0275|PLT0280,0.375,direct_import_species_review
+MOT_PLANT_0113,Quercus buckleyi,species,1,PLT0274,0.562,direct_import_species
+MOT_PLANT_0114,Quercus spp. - shin oak complex,species_complex,1,CAND3636,0.375,hold_review
+MOT_PLANT_0115,Quercus spp.,genus,7,PLT0280|PLT0275|PLT0277|PLT0274|PLT0276|PLT0278|PLT0279,0.211,import_genus_or_review_species
+MOT_PLANT_0116,Prosopis glandulosa,species,1,CAND3512,0.562,direct_import_species
+MOT_PLANT_0117,Celtis spp.,genus,1,PLT0183,0.27,import_genus_or_review_species
+MOT_PLANT_0118,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0119,Nassella leucotricha,species,1,CAND2909,0.562,direct_import_species
+MOT_PLANT_0120,Digitaria cognata,species,1,CAND1479,0.562,direct_import_species_review
+MOT_PLANT_0121,Bouteloua belangeri,species,1,CAND2909,0.562,direct_import_species_review
+MOT_PLANT_0122,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0123,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0124,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0125,Andropogon / Schizachyrium spp.,genus_group,1,CAND0279,0.21,import_functional_group
+MOT_PLANT_0126,Paspalum spp.,genus,1,CAND3111,0.27,import_genus_or_review_species
+MOT_PLANT_0127,Panicum virgatum,species,1,PLT0024,0.562,direct_import_species
+MOT_PLANT_0128,Quercus fusiformis / Quercus virginiana complex,species_complex,2,PLT0275|PLT0280,0.375,direct_import_species_review
+MOT_PLANT_0129,Quercus spp.,genus,7,PLT0280|PLT0275|PLT0277|PLT0274|PLT0276|PLT0278|PLT0279,0.211,import_genus_or_review_species
+MOT_PLANT_0130,Celtis spp.,genus,1,PLT0183,0.27,import_genus_or_review_species
+MOT_PLANT_0131,Rhus spp.,genus,4,PLT0203|PLT0204|PLT0205|PLT0217,0.211,import_genus_or_review_species
+MOT_PLANT_0132,Salix spp.,genus,1,PLT0283,0.162,import_genus_or_review_species
+MOT_PLANT_0133,Acer spp.,genus,2,PLT0243|PLT0242,0.162,import_genus_or_review_species
+MOT_PLANT_0134,Poaceae,family/functional_group,1,CAND3417,0.072,import_functional_group
+MOT_PLANT_0135,Cyperaceae / Carex-Cyperus-Eleocharis spp.,family/genus_group,1,CAND1357,0.099,import_functional_group
+MOT_PLANT_0136,Amelanchier spp.,genus,1,CAND0225,0.27,import_genus_or_review_species
+MOT_PLANT_0137,Prunus spp.,genus,5,PLT0271|PLT0270|PLT0216|PLT0269|PLT0272,0.211,import_genus_or_review_species
+MOT_PLANT_0138,Sorbus spp.,genus,1,CAND4377,0.27,hold_region_review
+MOT_PLANT_0139,Agave spp.,genus,1,PLT0232,0.234,import_genus_or_review_species
+MOT_PLANT_0140,Cercocarpus montanus complex,species_complex,1,MAMMALPLT0003,0.325,hold_region_review
+MOT_PLANT_0141,Poaceae,family/functional_group,1,CAND3417,0.104,import_functional_group
+MOT_PLANT_0142,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0143,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0144,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0145,Quercus fusiformis / Quercus virginiana complex,species_complex,2,PLT0275|PLT0280,0.375,direct_import_species_review
+MOT_PLANT_0146,Quercus spp.,genus,7,PLT0280|PLT0275|PLT0277|PLT0274|PLT0276|PLT0278|PLT0279,0.211,import_genus_or_review_species
+MOT_PLANT_0147,Celtis spp.,genus,1,PLT0183,0.27,import_genus_or_review_species
+MOT_PLANT_0148,Vitis mustangensis / Vitis spp.,species_or_genus,1,PLT0310,0.315,direct_import_species_review
+MOT_PLANT_0149,Smilax spp.,genus,1,CAND4295,0.27,import_genus_or_review_species
+MOT_PLANT_0150,Dasylirion texanum / Dasylirion spp.,species_or_genus,1,PLT0233,0.315,direct_import_species_review
+MOT_PLANT_0151,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0152,herbaceous forb functional group,functional_group,1,MAMMALPLT0001,0.12,import_functional_group
+MOT_PLANT_0153,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0154,Quercus fusiformis / Quercus virginiana complex,species_complex,2,PLT0275|PLT0280,0.375,direct_import_species_review
+MOT_PLANT_0155,Quercus spp.,genus,7,PLT0280|PLT0275|PLT0277|PLT0274|PLT0276|PLT0278|PLT0279,0.211,import_genus_or_review_species
+MOT_PLANT_0156,Prosopis glandulosa,species,1,CAND3512,0.562,direct_import_species
+MOT_PLANT_0157,Cyperaceae / Carex-Cyperus-Eleocharis spp.,family/genus_group,1,CAND1357,0.165,import_functional_group
+MOT_PLANT_0158,Digitaria cognata,species,1,CAND1479,0.562,direct_import_species_review
+MOT_PLANT_0159,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0160,herbaceous forb functional group,functional_group,1,MAMMALPLT0001,0.12,import_functional_group
+MOT_PLANT_0161,Poaceae,family/functional_group,1,CAND3417,0.072,import_functional_group
+MOT_PLANT_0162,herbaceous forb functional group,functional_group,1,MAMMALPLT0001,0.072,import_functional_group
+MOT_PLANT_0163,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0164,herbaceous forb functional group,functional_group,1,MAMMALPLT0001,0.12,import_functional_group
+MOT_PLANT_0165,Quercus spp.,genus,7,PLT0280|PLT0275|PLT0277|PLT0274|PLT0276|PLT0278|PLT0279,0.211,import_genus_or_review_species
+MOT_PLANT_0166,Cercocarpus montanus complex,species_complex,1,MAMMALPLT0003,0.375,hold_region_review
+MOT_PLANT_0167,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0168,herbaceous forb functional group,functional_group,1,MAMMALPLT0001,0.12,import_functional_group
+MOT_PLANT_0169,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0170,herbaceous forb functional group,functional_group,1,MAMMALPLT0001,0.12,import_functional_group
+MOT_PLANT_0171,Prosopis glandulosa,species,1,CAND3512,0.562,direct_import_species
+MOT_PLANT_0172,Prosopis glandulosa,species,1,CAND3512,0.562,direct_import_species
+MOT_PLANT_0173,Opuntia engelmannii complex,species_complex,2,PLT0238|CAND3022,0.375,direct_import_species_review
+MOT_PLANT_0174,Cactaceae / Cylindropuntia spp.,family_genus_group,1,CAND0725,0.165,import_genus_or_group_only
+MOT_PLANT_0175,Agave lechuguilla,species,1,CAND0129,0.562,hold_region_review
+MOT_PLANT_0176,Dasylirion texanum / Dasylirion spp.,species_or_genus,1,PLT0233,0.315,direct_import_species_review
+MOT_PLANT_0177,Opuntia engelmannii complex,species_complex,2,PLT0238|CAND3022,0.375,direct_import_species_review
+MOT_PLANT_0178,Quercus spp.,genus,7,PLT0280|PLT0275|PLT0277|PLT0274|PLT0276|PLT0278|PLT0279,0.211,import_genus_or_review_species
+MOT_PLANT_0179,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0180,Cyperaceae / Carex-Cyperus-Eleocharis spp.,family/genus_group,1,CAND1357,0.165,import_functional_group
+MOT_PLANT_0181,Bacopa spp.,genus,1,CAND0536,0.27,import_genus_or_review_species
+MOT_PLANT_0182,Hydrocotyle spp.,genus,1,PLT0098,0.27,import_genus_or_review_species
+MOT_PLANT_0183,Phyla nodiflora,species,1,PLT0125,0.562,direct_import_species
+MOT_PLANT_0184,Centella erecta / Hydrocotyle spp.,species_or_genus,1,PLT0098,0.315,hold_review
+MOT_PLANT_0185,Allium spp.,genus,1,CAND0158,0.27,import_genus_or_review_species
+MOT_PLANT_0186,Schoenoplectus / Scirpus spp.,genus_group,1,CAND4157,0.21,import_genus_or_group_only
+MOT_PLANT_0187,Typha spp.,genus,1,CAND4755,0.27,import_genus_or_group_only
+MOT_PLANT_0192,Quercus spp.,genus,7,PLT0280|PLT0275|PLT0277|PLT0274|PLT0276|PLT0278|PLT0279,0.211,import_genus_or_review_species
+MOT_PLANT_0193,Quercus spp.,genus,7,PLT0280|PLT0275|PLT0277|PLT0274|PLT0276|PLT0278|PLT0279,0.211,import_genus_or_review_species
+MOT_PLANT_0194,Prunus spp.,genus,5,PLT0271|PLT0270|PLT0216|PLT0269|PLT0272,0.211,import_genus_or_review_species
+MOT_PLANT_0195,Toxicodendron pubescens,species,1,CAND4672,0.562,direct_import_species_review
+MOT_PLANT_0197,Pinus spp.,genus,1,CAND3281,0.27,hold_region_review
+MOT_PLANT_0198,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0199,Trifolium spp.,genus,1,CAND4714,0.27,hold_review
+MOT_PLANT_0200,Quercus spp.,genus,7,PLT0280|PLT0275|PLT0277|PLT0274|PLT0276|PLT0278|PLT0279,0.211,import_genus_or_review_species
+MOT_PLANT_0201,Potamogetonaceae / Potamogeton spp.,family/genus_group,1,MAMMALPLT0004,0.165,import_genus_or_group_only
+MOT_PLANT_0203,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0204,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0205,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0207,Diospyros texana / Diospyros virginiana,species_pair,2,PLT0252|PLT0253,0.39,direct_import_species_review
+MOT_PLANT_0208,Ilex vomitoria,species,1,PLT0214,0.562,direct_import_species
+MOT_PLANT_0209,Ilex decidua,species,1,PLT0213,0.562,direct_import_species
+MOT_PLANT_0210,Quercus spp.,genus,7,PLT0280|PLT0275|PLT0277|PLT0274|PLT0276|PLT0278|PLT0279,0.211,import_genus_or_review_species
+MOT_PLANT_0211,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group
+MOT_PLANT_0212,Poaceae,family/functional_group,1,CAND3417,0.12,import_functional_group

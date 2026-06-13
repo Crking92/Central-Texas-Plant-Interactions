@@ -27,3 +27,11 @@
 - Added click-to-expand score category explanations.
 - Added grade basis filter for ecological vs balanced grades.
 - Added score sort options for balanced and ecological score.
+
+
+## v0.13 - Mammal handoff layer
+
+- Imported `Import_Ready_No_Crops` from the final mammal dashboard handoff workbook.
+- Added The Mammals of Texas as the primary mammal source statement and row-level citation family.
+- Updated mammal score and dual ecological/balanced scores.
+- Added mammal mapping audit and summary CSVs under `docs/`.
