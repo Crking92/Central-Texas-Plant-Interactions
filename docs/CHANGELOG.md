@@ -15,7 +15,15 @@
 - Updated public wording to explain that low/blank scores often mean data are not yet complete.
 - Kept internal build/source-layer wording out of the public interface.
 
-### Grade band adjustment
 
-- Changed overall letter grades to use current-dataset bands rather than school-style bands: A >= 72, B >= 58, C >= 42, D >= 28, Limited below 28.
-- This creates a more useful spread while the dataset is still growing.
+## v0.11
+- Expanded target-zone public grades from A-D/limited into A-F bands.
+- Added a Score grade dropdown filter to separate plants by grade.
+- Added public note explaining that low grades can mean limited verified direct-interaction data, not ecological worthlessness.
+
+
+## v0.12 - Score breakdown and dual scores
+- Added ecological score beside balanced score.
+- Added click-to-expand score category explanations.
+- Added grade basis filter for ecological vs balanced grades.
+- Added score sort options for balanced and ecological score.

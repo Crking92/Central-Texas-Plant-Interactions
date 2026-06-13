@@ -1,0 +1,4 @@
+item,public_logic
+Ecological score,"Direct animal-use signal only: host, pollinator, bird, mammal, other direct-use, season, and animal-group diversity. Does not penalize for target-zone validation or recommendation caution."
+Balanced score,"Current public/research score: direct-use evidence balanced with evidence strength, locality/target-zone confidence, and recommendation status."
+Grade bands,"A >=70, B 60-69, C 50-59, D 40-49, E 30-39, F 1-29, no verified direct records = 0."

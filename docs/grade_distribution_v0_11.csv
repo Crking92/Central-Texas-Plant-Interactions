@@ -1,0 +1,10 @@
+scope,grade,plant_count
+target-zone,A,4
+target-zone,B,6
+target-zone,C,23
+target-zone,D,59
+target-zone,E,103
+target-zone,F,115
+target-zone,No verified direct records yet,6
+review-layer,Review - high caution,91
+review-layer,Review - not target-zone verified,4963
