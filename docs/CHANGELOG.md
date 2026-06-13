@@ -1,5 +1,15 @@
 # Changelog
 
+## v0.14 target-zone thumbnails/layout
+- Widened the dashboard layout and made the Open button sticky at the right edge of the table.
+- Simplified target-zone status wording to public-facing text.
+- Added a Target-zone logic modal with the City of Kyle target-zone map.
+- Removed the visible “no current caution flag” chip from normal plant rows.
+- Added iNaturalist plant thumbnails in the plant table and animal thumbnails in plant detail rows. Photos remain visual references only and are not scoring evidence.
+- iNaturalist photo search strips variety/subspecies suffixes for better plant image matching.
+
+# Changelog
+
 ## v0.8 public-clean
 - Hid internal source-layer/workbook labels from the public interaction table.
 - Replaced technical source wording with public citation wording.
