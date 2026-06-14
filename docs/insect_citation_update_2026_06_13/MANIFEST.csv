@@ -1,0 +1,11 @@
+path,bytes
+README_UPLOAD_INSTRUCTIONS.md,2132
+data/dashboard_sources_v0_3.csv,4283
+data/hays_insect_citations_2045.csv,1221162
+data/hays_insect_manual_recovery_needed_91.csv,52682
+data/hays_insect_no_digital_locator_8.csv,4675
+docs/HAYS_INSECT_CITATION_AUDIT_2026_06_13.md,1991
+docs/all_insect_citation_gap_check.csv,347
+docs/hays_insect_citation_summary.csv,975
+docs/hays_insect_verification_bucket_summary.csv,195
+support/provenance/insect_data_collection_chat_provenance_note.md,1465

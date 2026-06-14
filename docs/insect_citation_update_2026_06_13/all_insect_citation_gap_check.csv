@@ -1,0 +1,6 @@
+metric,value,note
+all_dashboard_insect_rows,46741,
+all_insect_rows_missing_source_label,0,
+all_insect_rows_missing_citation_text,0,
+all_insect_rows_without_clickable_url,91,These are the same no-click Hays-only rows found in the 91-row manual recovery table.
+all_insect_rows_without_url_doi_uuid,8,These are the 8 weakest Hays-only records.
