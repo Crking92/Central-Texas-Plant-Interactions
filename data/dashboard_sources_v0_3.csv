@@ -3,7 +3,7 @@ Texas-Host-Plants-main.zip / verified-data.csv,36172,"Source-backed insect host 
 Host Calculator(3).xlsx,0,"Supplemental host-calculator workbook supplied by user; used as source context for Lepidoptera, bees, beetles, and sawflies."
 Central-Texas-Bee-Relationships-main.zip / evidence_rows.csv,4313,Bee/plant evidence rows; direct flower and food terms retained.
 Hays-County-Insect-Interactions-main.zip / central_texas_insect_interactions_simplified.csv,19856,Regional insect interaction rows; parasites/co-occurrence excluded.
-Central-Texas-Bird-Interactions-main.zip / Audubon + LBJ profile data,7683,Audubon food-guild rows plus LBJ profile direct wildlife-use terms such as Fruit-birds and Fruit-mammals.
+Central-Texas-Bird-Interactions-main.zip / Audubon + LBJ profile data,7683,Audubon broad May Attract bird-family support retained as trusted profile evidence; no longer cross-multiplied into plant x bird-group x resource direct-food rows. LBJ profile terms remain broad wildlife-use profile rows.
 Central-Texas-Mammal-Interactions-main.zip / data.js,1271,Mammal plant-use candidates; heavily filtered because most raw rows were not plant-use records.
 central_texas_interactions(7).xlsx / GloBI raw,39562,Raw GloBI-style interaction data; direct animal-plant terms only.
 TexasNonNatives.org screen,809,Non-native status and Fundamental Invasiveness Index crosswalk.
