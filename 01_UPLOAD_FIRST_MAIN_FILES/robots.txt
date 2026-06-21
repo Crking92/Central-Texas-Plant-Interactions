@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /data/details/
+Disallow: /data/detail-map-v1.json
+
+# This asks compliant search engines not to index detail files. It is not access control.
