@@ -1,0 +1,10 @@
+BATCH VERIFICATION
+==================
+
+01_UPLOAD_FIRST_MAIN_FILES: 12 files; largest = data/dashboard_plants_v0_3.csv (7,455,700 bytes)
+02_UPLOAD_SECOND_DETAILS: 90 files; largest = data/details/r-0f3ddd8c68bc33a3d62f.json (510,027 bytes)
+03_UPLOAD_THIRD_DETAILS: 90 files; largest = data/details/r-832fef26855547217cfc.json (749,605 bytes)
+04_UPLOAD_LAST_DETAILS: 76 files; largest = data/details/r-f30781624dded04c8d42.json (763,221 bytes)
+
+Total upload files: 268
+All individual files are under 25 MiB.
